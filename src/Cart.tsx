@@ -1,35 +1,9 @@
-import { CartData } from "./CartDataProdiver";
+import { useContext } from "react";
+import { CartDataContext, CartDataContextType } from "./CartDataProdiver";
 import "./Cart.css";
 
-
-// mock data
-const mockCartData: CartData = {
-    items: [
-        {
-            id: 1,
-            modelName: 'Ultimate Speed Bike',
-            price: 300,
-            quantity: 1,
-            subtotal: 300,
-        }, {
-            id: 5,
-            modelName: 'Mountain Xplr',
-            price: 315,
-            quantity: 2,
-            subtotal: 630,
-        },
-    ],
-    total: 930,
-};
-const cartData = mockCartData;
-
-// const emptyCartData: CartData = {
-//     items: [],
-//     total: 0
-// };
-// const cartData = emptyCartData;
-
 const Cart = () => {
+    const { cartData } = useContext(CartDataContext) as CartDataContextType;
     if (cartData.items.length > 0) return (
         <div className="cart__container">
             <h2>Items on Cart</h2>

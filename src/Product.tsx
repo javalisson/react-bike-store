@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { CartDataContext, CartDataContextType } from "./CartDataProdiver";
 import { Bike } from "./types";
 import "./Product.css";
 
 
 
 const Product: React.FC<{data: Bike}> = ({data}) => {
+    const { addToCart } = useContext(CartDataContext) as CartDataContextType;
     const onAddToCart = (product: Bike) => {
-        console.log("On add to cart", product);
+        addToCart(product);
     };
     const product: Bike = data;
     return (<div className="product">
