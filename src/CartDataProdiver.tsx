@@ -4,30 +4,30 @@ import { Bike, CartItem, CartData, CartDataContextType } from "./types";
 let initialCartData: CartData;
 
 // mock data
-const mockCartData: CartData = {
-    items: [
-        {
-            id: 1,
-            modelName: 'Ultimate Speed Bike',
-            price: 300,
-            quantity: 1,
-            subtotal: 300,
-        }, {
-            id: 5,
-            modelName: 'Mountain Xplr',
-            price: 315,
-            quantity: 2,
-            subtotal: 630,
-        }, {
-            id: 9,
-            modelName: 'Sunrise',
-            price: 340,
-            quantity: 3,
-            subtotal: 1020,
-        },
-    ],
-    total: 1950,
-};
+// const mockCartData: CartData = {
+//     items: [
+//         {
+//             id: 1,
+//             modelName: 'Ultimate Speed Bike',
+//             price: 300,
+//             quantity: 1,
+//             subtotal: 300,
+//         }, {
+//             id: 5,
+//             modelName: 'Mountain Xplr',
+//             price: 315,
+//             quantity: 2,
+//             subtotal: 630,
+//         }, {
+//             id: 9,
+//             modelName: 'Sunrise',
+//             price: 340,
+//             quantity: 3,
+//             subtotal: 1020,
+//         },
+//     ],
+//     total: 1950,
+// };
 // initialCartData = mockCartData;
 
 const emptyCart: CartData = {

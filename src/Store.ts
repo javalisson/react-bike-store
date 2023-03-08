@@ -62,8 +62,6 @@ const bikes: Record<BikeCategory, Bike[]> = {
     ],
 }
 
-// TODO populate the `allBikes` array to include a single list of all bikes in `bikes`
-// const allBikes: Bike[] = [];
 const allBikes: Bike[] = Object.values(bikes).reduce((acc: Bike[], models) => acc.concat(models), []);
 
 // console.log(allBikes);
