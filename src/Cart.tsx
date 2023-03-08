@@ -1,4 +1,4 @@
-import { CartData } from "./CartDataProdiver";
+import { CartData } from "./types";
 import "./Cart.css";
 
 
