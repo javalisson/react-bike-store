@@ -1,0 +1,17 @@
+.product__image {
+    width: 100%;
+}
+
+.product__info {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.product__model {
+    flex: 1;
+}
+
+.product_cta button {
+    width: 100%;
+    padding: 0.5rem;
+}
