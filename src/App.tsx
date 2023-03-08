@@ -9,12 +9,12 @@ function App() {
       <header className="App-header">
         <h1>My Bike Store</h1>
       </header>
-      <main className="App-main-content">
-        <ProductList />
-      </main>
       <aside className='App-sidebar'>
         <Cart />
       </aside>
+      <main className="App-main-content">
+        <ProductList />
+      </main>
     </div>
   );
 }
