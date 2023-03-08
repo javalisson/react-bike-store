@@ -9,9 +9,11 @@ function App() {
       <header className="App-header">
         <h1>My Bike Store</h1>
       </header>
+
       <aside className='App-sidebar'>
         <Cart />
       </aside>
+
       <main className="App-main-content">
         <ProductList />
       </main>

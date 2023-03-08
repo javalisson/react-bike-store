@@ -1,11 +1,12 @@
-import { Bike } from "./data/store";
+import { Bike } from "./types";
 import "./Product.css";
 
-const onAddToCart = (product: Bike) => {
-    console.log("On add to cart", product);
-};
+
 
 const Product: React.FC<{data: Bike}> = ({data}) => {
+    const onAddToCart = (product: Bike) => {
+        console.log("On add to cart", product);
+    };
     const product: Bike = data;
     return (<div className="product">
         <img className="product__image" src={product.productImage} alt="" />

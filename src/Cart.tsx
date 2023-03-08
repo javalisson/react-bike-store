@@ -1,51 +1,53 @@
-import { Bike } from "./data/store";
+import { CartData } from "./CartDataProdiver";
+import "./Cart.css";
 
-interface CartItem extends Bike {
-    quantity: number
-    subtotal: number
-
-}
-
-interface CartInfo {
-    items: CartItem[]
-    total: number
-}
 
 // mock data
-// const cartInfo: CartInfo = {
-//     items: [
-//         {
-//             modelName: 'Ultimate Speed Bike',
-//             price: 300,
-//             quantity: 1,
-//             subtotal: 300,
-//         }, {
-//             modelName: 'Mountain Xplr',
-//             price: 315,
-//             quantity: 2,
-//             subtotal: 630,
-//         },
-//     ],
-//     total: 930,
-// };
-
-const cartInfo: CartInfo = {
-    items: [],
-    total: 0
+const mockCartData: CartData = {
+    items: [
+        {
+            id: 1,
+            modelName: 'Ultimate Speed Bike',
+            price: 300,
+            quantity: 1,
+            subtotal: 300,
+        }, {
+            id: 5,
+            modelName: 'Mountain Xplr',
+            price: 315,
+            quantity: 2,
+            subtotal: 630,
+        },
+    ],
+    total: 930,
 };
+const cartData = mockCartData;
+
+// const emptyCartData: CartData = {
+//     items: [],
+//     total: 0
+// };
+// const cartData = emptyCartData;
 
 const Cart = () => {
-    const data: CartInfo = cartInfo;
-    if (data.items.length > 0) return (
-        <div>
-            Items on Cart
-            <ul>
-                {data.items.map(item => <li key={item.modelName.toLocaleLowerCase().replace(' ', '-')}>{item.modelName} x {item.quantity} Subtotal: USD {item.subtotal}</li>)}
+    if (cartData.items.length > 0) return (
+        <div className="cart__container">
+            <h2>Items on Cart</h2>
+            <ul className="cart__items-container">
+                {cartData.items.map(item => (
+                    <li className="cart__item" key={item.id}>
+                        <span className="cart__item-name-quantity">
+                            <span className="cart__item-model-name">{item.modelName}</span>
+                            x <span>{item.quantity}</span>
+                        </span>
+                        <span className="cart__item-subtotal"><span className="cart__item-subtotal-label">Subtotal:</span> USD&nbsp;<span>{item.subtotal}</span></span>
+                    </li>
+                ))}
             </ul>
-            Total: USD {data.total}
+            <span className="cart__total-container"><span className="cart__total-label">Total:</span> <span>USD&nbsp;{cartData.total}</span></span>
         </div>
     );
-    return <div>Cart is empty</div>
+    return <div className="cart__container">Cart is empty</div>
 };
 
 export default Cart;
