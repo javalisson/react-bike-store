@@ -62,7 +62,7 @@ const bikes: Record<BikeCategory, Bike[]> = {
     ],
 }
 
-const allBikes: Bike[] = Object.values(bikes).reduce((acc: Bike[], models) => acc.concat(models), []);
+const allBikes: Bike[] = Object.values(bikes).flat();
 
 // console.log(allBikes);
 
