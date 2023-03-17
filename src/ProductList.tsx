@@ -10,7 +10,7 @@ const ProductList = () => {
                 <ul className="product-list__list-container">
                     {
                         allBikes.map(bike => 
-                            <li className="product-list__list-item" key={bike.modelName.toLocaleLowerCase().replace(' ', '-')}>
+                            <li className="product-list__list-item" key={bike.id}>
                                 <Product data={bike} />
                             </li>)}
                 </ul>
